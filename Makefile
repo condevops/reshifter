@@ -1,4 +1,4 @@
-reshifter_version := 0.3.21
+reshifter_version := 0.3.22
 git_version := `git rev-parse HEAD`
 app_name := reshifter-app
 main_dir := `pwd`
@@ -33,10 +33,10 @@ gclean :
 crelease : cbuild cpush
 
 cbuild :
-	@docker build --build-arg rversion=$(reshifter_version) -t quay.io/mhausenblas/reshifter:$(reshifter_version) app/
+	@docker build --build-arg rversion=$(reshifter_version) -t registry.battery-park.conductor.com/reshifter:$(reshifter_version) .
 
 cpush :
-	@docker push quay.io/mhausenblas/reshifter:$(reshifter_version)
+	@docker push registry.battery-park.conductor.com/reshifter:$(reshifter_version)
 
 
 ###############################################################################

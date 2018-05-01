@@ -15,7 +15,20 @@
 
 [[projects]]
   name = "github.com/coreos/etcd"
-  packages = ["auth/authpb","client","clientv3","etcdserver/api/v3rpc/rpctypes","etcdserver/etcdserverpb","mvcc/mvccpb","pkg/pathutil","pkg/srv","pkg/tlsutil","pkg/transport","pkg/types","version"]
+  packages = [
+    "auth/authpb",
+    "client",
+    "clientv3",
+    "etcdserver/api/v3rpc/rpctypes",
+    "etcdserver/etcdserverpb",
+    "mvcc/mvccpb",
+    "pkg/pathutil",
+    "pkg/srv",
+    "pkg/tlsutil",
+    "pkg/transport",
+    "pkg/types",
+    "version"
+  ]
   revision = "61fc123e7a8b14a0a258aa3f5c4159861b1ec2e7"
   version = "v3.2.1"
 
@@ -34,7 +47,10 @@
 [[projects]]
   branch = "master"
   name = "github.com/golang/protobuf"
-  packages = ["proto","ptypes/any"]
+  packages = [
+    "proto",
+    "ptypes/any"
+  ]
   revision = "6a1fa9404c0aebf36c879bc50152edcc953910d2"
 
 [[projects]]
@@ -52,7 +68,17 @@
 [[projects]]
   branch = "master"
   name = "github.com/hashicorp/hcl"
-  packages = [".","hcl/ast","hcl/parser","hcl/scanner","hcl/strconv","hcl/token","json/parser","json/scanner","json/token"]
+  packages = [
+    ".",
+    "hcl/ast",
+    "hcl/parser",
+    "hcl/scanner",
+    "hcl/strconv",
+    "hcl/token",
+    "json/parser",
+    "json/scanner",
+    "json/token"
+  ]
   revision = "392dba7d905ed5d04a5794ba89f558b27e2ba1ca"
 
 [[projects]]
@@ -74,8 +100,30 @@
   version = "v1.0.0"
 
 [[projects]]
+  name = "github.com/mhausenblas/reshifter"
+  packages = [
+    "app/handler",
+    "pkg/backup",
+    "pkg/discovery",
+    "pkg/remotes",
+    "pkg/restore",
+    "pkg/types",
+    "pkg/util",
+    "rcli/cmd"
+  ]
+  revision = "cb6cc37a9bb9bf029a8a50005113fd418449412e"
+  version = "v0.3.21-alpha"
+
+[[projects]]
   name = "github.com/minio/minio-go"
-  packages = [".","pkg/encrypt","pkg/policy","pkg/s3signer","pkg/s3utils","pkg/set"]
+  packages = [
+    ".",
+    "pkg/encrypt",
+    "pkg/policy",
+    "pkg/s3signer",
+    "pkg/s3utils",
+    "pkg/set"
+  ]
   revision = "2f03abaa07d8bc57faef16cda7655ea62a7e0bed"
   version = "v2.1.0"
 
@@ -111,7 +159,10 @@
 
 [[projects]]
   name = "github.com/prometheus/client_golang"
-  packages = ["prometheus","prometheus/promhttp"]
+  packages = [
+    "prometheus",
+    "prometheus/promhttp"
+  ]
   revision = "c5b7fccd204277076155f10851dad72b76a49317"
   version = "v0.8.0"
 
@@ -124,19 +175,29 @@
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/common"
-  packages = ["expfmt","internal/bitbucket.org/ww/goautoneg","model"]
+  packages = [
+    "expfmt",
+    "internal/bitbucket.org/ww/goautoneg",
+    "model"
+  ]
   revision = "0866df4b85a18d652b6965be022d007cdf076822"
 
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/procfs"
-  packages = [".","xfs"]
+  packages = [
+    ".",
+    "xfs"
+  ]
   revision = "822d4a1f8edcbcbc71e8d1fd6527b12331a6d0ad"
 
 [[projects]]
   branch = "master"
   name = "github.com/spf13/afero"
-  packages = [".","mem"]
+  packages = [
+    ".",
+    "mem"
+  ]
   revision = "9be650865eab0c12963d8753212f4f9c66cdcf12"
 
 [[projects]]
@@ -178,7 +239,15 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = ["context","http2","http2/hpack","idna","internal/timeseries","lex/httplex","trace"]
+  packages = [
+    "context",
+    "http2",
+    "http2/hpack",
+    "idna",
+    "internal/timeseries",
+    "lex/httplex",
+    "trace"
+  ]
   revision = "1f9224279e98554b6a6432d4dd998a739f8b2b7c"
 
 [[projects]]
@@ -190,7 +259,17 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/text"
-  packages = ["internal/gen","internal/triegen","internal/ucd","secure/bidirule","transform","unicode/bidi","unicode/cldr","unicode/norm","unicode/rangetable"]
+  packages = [
+    "internal/gen",
+    "internal/triegen",
+    "internal/ucd",
+    "secure/bidirule",
+    "transform",
+    "unicode/bidi",
+    "unicode/cldr",
+    "unicode/norm",
+    "unicode/rangetable"
+  ]
   revision = "6353ef0f924300eea566d3438817aa4d3374817e"
 
 [[projects]]
@@ -201,9 +280,24 @@
 
 [[projects]]
   name = "google.golang.org/grpc"
-  packages = [".","codes","credentials","grpclb/grpc_lb_v1","grpclog","internal","keepalive","metadata","naming","peer","stats","status","tap","transport"]
+  packages = [
+    ".",
+    "codes",
+    "credentials",
+    "grpclb/grpc_lb_v1",
+    "grpclog",
+    "internal",
+    "keepalive",
+    "metadata",
+    "naming",
+    "peer",
+    "stats",
+    "status",
+    "tap",
+    "transport"
+  ]
   revision = "b15215fb911b24a5d61d57feec4233d610530464"
-  version = "v1.4.2"
+  version = "v1.11.3"
 
 [[projects]]
   branch = "v2"
@@ -214,6 +308,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d1aaa98277bd2de3516988d28c6e22ca0fc8768851ede86b9cff110c2d727392"
+  inputs-digest = "677f0bc1d6a17ce6d83c26bdcbf6b0846d5a39160965d119b475a6c9e35b6114"
   solver-name = "gps-cdcl"
   solver-version = 1
