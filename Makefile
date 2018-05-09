@@ -16,11 +16,11 @@ gtest :
 gbuild : gbuildcli gbuildapp
 
 gbuildcli :
-	go build -ldflags "-X github.com/mhausenblas/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-macos rcli/main.go
-	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/mhausenblas/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-linux rcli/main.go
+	go build -ldflags "-X github.com/condevops/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-macos rcli/main.go
+	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/condevops/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-linux rcli/main.go
 
 gbuildapp :
-	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/mhausenblas/reshifter/app/handler.releaseVersion=$(reshifter_version)" -o ./reshifter app/main.go
+	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/condevops/reshifter/app/handler.releaseVersion=$(reshifter_version)" -o ./reshifter app/main.go
 
 gclean :
 	@rm reshifter
