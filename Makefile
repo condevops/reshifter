@@ -1,4 +1,4 @@
-reshifter_version := 0.3.21
+reshifter_version := 0.3.22
 git_version := `git rev-parse HEAD`
 app_name := reshifter-app
 main_dir := `pwd`
@@ -16,11 +16,11 @@ gtest :
 gbuild : gbuildcli gbuildapp
 
 gbuildcli :
-	go build -ldflags "-X github.com/mhausenblas/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-macos rcli/main.go
-	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/mhausenblas/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-linux rcli/main.go
+	go build -ldflags "-X github.com/condevops/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-macos rcli/main.go
+	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/condevops/reshifter/rcli/cmd.releaseVersion=$(reshifter_version)" -o ./rcli-linux rcli/main.go
 
 gbuildapp :
-	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/mhausenblas/reshifter/app/handler.releaseVersion=$(reshifter_version)" -o ./reshifter app/main.go
+	GOOS=linux GOARCH=amd64 go build -ldflags "-X github.com/condevops/reshifter/app/handler.releaseVersion=$(reshifter_version)" -o ./reshifter app/main.go
 
 gclean :
 	@rm reshifter
@@ -33,10 +33,10 @@ gclean :
 crelease : cbuild cpush
 
 cbuild :
-	@docker build --build-arg rversion=$(reshifter_version) -t quay.io/mhausenblas/reshifter:$(reshifter_version) app/
+	@docker build --build-arg rversion=$(reshifter_version) -t registry.battery-park.conductor.com/reshifter:$(reshifter_version) .
 
 cpush :
-	@docker push quay.io/mhausenblas/reshifter:$(reshifter_version)
+	@docker push registry.battery-park.conductor.com/reshifter:$(reshifter_version)
 
 
 ###############################################################################
